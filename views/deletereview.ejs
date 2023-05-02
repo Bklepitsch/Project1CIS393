@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="reviewstyle.css" rel="stylesheet">
+</head>
+
+</style>
+<body>
+   <header>
+      <h1>Enter ID of Review to Delete</h1>
+      <nav>
+         <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/insert">Add Review</a></li>
+            <li><a href="/search">Find Review</a></li>
+            <li><a href="/update">Update Review</a></li>
+            <li><a href="/delete">Delete Review</a></li>
+            <li><a href="/display">Display Reviews</a></li>
+         </ul>
+      </nav>
+      <h2>Currently there are <%=count%> Users in the gameCompletion table</h2>
+   </header>
+   <main>
+    <form method ="POST" action="/deletereview">
+        <p>
+            <label for="reviewID">Enter ID: </label>
+            <input type="number" id="reviewID" name="review_id" required>
+         </p>
+    <button>Submit</button>
+</form>
+
+</body>
+</html>

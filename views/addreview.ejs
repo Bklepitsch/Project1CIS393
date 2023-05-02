@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="reviewstyle.css" rel="stylesheet">
+    <script src="validate.js" defer></script>
+</head>
+<body>
+   <header>
+      <h1>2022's Best Games - Your Review</h1>
+      <nav>
+         <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/insert">Add Review</a></li>
+            <li><a href="/search">Find Review</a></li>
+            <li><a href="/update">Update Review</a></li>
+            <li><a href="/delete">Delete Review</a></li>
+            <li><a href="/display">Display Reviews</a></li>
+         </ul>
+      </nav>
+      <h2>Currently there are <%=count%> Users in the gameCompletion table</h2>
+   </header>
+   <main>
+    
+    <h2>Add Review</h2>
+    
+    <form method ="POST" action="/register">
+        <p>
+            <label for="name">Name: </label>
+            <input type="text" id="user_name" name="name" required>
+         </p>
+         <p>
+            <label for="videogame">Video Game: </label>
+            <select id="user_game" name="videogame" required>
+               <option value="">Choose one...</option>
+               <option>Elden Ring</option>
+               <option>God of War Ragnorok</option>
+               <option>Horizon Zero Dawn Forbidden West</option>
+               <option>A Plague Tale: Requiem</option>
+               <option>Stray</option>
+               <option>Xenoblade Chronicles 3</option>
+            </select>
+         </p>
+         <p>
+            <label for="rating">Rating: </label>
+            <input type="number" id="user_rating" name="rating" min="1" max="5" step="0.5" required>
+         </p>
+         <p>
+             <label for="completion">Completion Percentage: </label>
+             <input type="number" id="user_completion" name="completion" min="0" max="100" step="1" required>
+          </p>
+         <p>
+            <label for="review">Review: </label>
+            <textarea id="user_review" name="review" rows="5" cols="40"></textarea>
+         </p>
+        <button>Submit</button>
+        </form>
+        
+</body>
+</html>

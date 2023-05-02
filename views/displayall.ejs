@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Video Game</title>
+      <link href="style.css" rel="stylesheet">
+   </head>
+   <body>
+<header>
+<h1>User Information</h1>
+<nav>
+    <ul>
+       <li><a href="/">Home</a></li>
+       <li><a href="/insert">Add Review</a></li>
+       <li><a href="/search">Find Review</a></li>
+       <li><a href="/update">Update Review</a></li>
+       <li><a href="/delete">Delete Review</a></li>
+       <li><a href="/display">Display Reviews</a></li>
+    </ul>
+ </nav>
+
+</header>
+<table border=0>
+<tr style='text-align:left; background-color:blue; font-size:30pt; color: white'>
+<th>Name</th>
+<th>Game</th>
+<th>Rating</th>
+<th>Completion</th>
+<th>Review</th>
+<th>ID</th>
+</tr>
+
+<% data.forEach(function(user){ %>
+<tr style='text-align:left;  background-color:white; font-size:15pt;'>
+<td><%= user.Name %></td>
+<td><%= user.Game %></td>
+<td><%= user.Rating%></td>
+<td><%= user.Completion%></td>
+<td><%= user.Review%></td>
+<td><%= user.ID%></td>
+<% }) %>
+</tr>
+
+</table>
+</body>
+</html>
